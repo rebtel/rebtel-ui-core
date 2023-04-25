@@ -1,6 +1,6 @@
 {
-  "name": "rebtel-ui-core",
-  "version": "0.0.1",
+  "name": "@rebtel-dev/rebtel-ui-core",
+  "version": "1.0.0",
   "description": "rebtel core ui library",
   "main": "dist/rebtel-ui-core.umd.js",
   "module": "dist/rebtel-ui-core.esm.js",
@@ -188,5 +188,13 @@
     "vue-runtime-helpers": "^1.1.2",
     "with": "^7.0.2",
     "wrappy": "^1.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebtel/rebtel-ui-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rebtel/rebtel-ui-core/issues"
+  },
+  "homepage": "https://github.com/rebtel/rebtel-ui-core#readme"
 }
