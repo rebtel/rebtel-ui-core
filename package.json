@@ -1,6 +1,6 @@
 {
   "name": "rebtel-ui-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rebtel core ui library",
   "main": "dist/rebtel-ui-core.umd.js",
   "module": "dist/rebtel-ui-core.esm.js",
