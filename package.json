@@ -1,12 +1,12 @@
 {
   "name": "@rebtel-dev/rebtel-ui-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "rebtel core ui library",
   "main": "dist/rebtel-ui-core.umd.js",
   "module": "dist/rebtel-ui-core.esm.js",
   "unpkg": "dist/rebtel-ui-core.min.js",
   "browser": {
-    "./sfc": "src/index.vue"
+    "./sfc": "src/index.js"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -186,7 +186,8 @@
     "unicode-match-property-value-ecmascript": "^1.2.0",
     "vue-runtime-helpers": "^1.1.2",
     "with": "^7.0.2",
-    "wrappy": "^1.0.2"
+    "wrappy": "^1.0.2",
+    "fsevents": "~2.3.2"
   },
   "optionalDependencies": {
     "fsevents": "~2.3.2"
