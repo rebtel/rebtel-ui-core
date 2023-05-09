@@ -1,53 +1,54 @@
-const webpack = require('webpack')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var path = require('path')
+var webpack = require('webpack')
+var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
-  target: 'node',
   entry: './src/index.js',
   output: {
-    path: __dirname + "/dist/",
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
     filename: 'index.js',
-    library: 'rebtel.core-ui',
+    library:'rebtel-core-ui',
     libraryTarget: 'umd'
-  },
-  resolve: {
-    extensions: ["*", ".js", ".vue", ".json"]
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: "vue-loader"
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          use: 'css-loader',
-          fallback: 'vue-style-loader'
-        })
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader'
+          }
+        }
       },
       {
         test: /\.js$/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/
       }
-     ]
+    ]
   },
+  externals: {
+    vue: 'vue'
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  },
+  performance: {
+    hints: false
+  },
+  devtool: '#source-map',
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
     }),
-    new ExtractTextPlugin("style.css"),
-    new UglifyJsPlugin({
-        uglifyOptions: {
-            compress: {
-              warnings: false
-            }
-        },  
-        minimize : true,
-        sourceMap : false,
-        mangle: true
+    new OptimizeCSSPlugin({
+      cssProcessorOptions: {
+        safe: true
+      }
     })
   ]
 }

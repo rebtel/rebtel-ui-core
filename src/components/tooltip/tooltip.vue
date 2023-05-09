@@ -6,21 +6,19 @@
   </div>
 </template>
 <script>
-import { defineComponent } from 'vue'
 
-export default defineComponent({
+export default {
   name: 'Tooltip',
-  inheritAttrs: false,
   props: {
     text: {
       type: String,
       required: true
     }
   }
-})
+}
 </script>
 
-<style scoped>
+<style>
 .tool {
     cursor: help;
     position: relative;
