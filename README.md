@@ -3,36 +3,53 @@
   
   This Library created by Rebtel WEB team to use for some core UI components in multiple repositories. 👋 
   </br>
-  <h3>Installation</h3>
-  
-  ```sh
-  npm install --save @rebtel-dev/rebtel-ui-core
-  ```
-  or
-  ```sh
-  yarn add @rebtel-dev/rebtel-ui-core
-  ```
-  <h3>Basic Usage of RebtelTooltip Component</h3>
+### Install
 
-  ```sh
-  <template>
-    <RebtelTooltip
-      :text="Hello World"
-    />
-  </template>
+```bash
+npm install @rebtel-dev/rebtel-ui-core --save
+```
 
-  <script>
-  import {RebtelTooltip} from "@rebtel-dev/rebtel-ui-core";
+### Import
 
-  export default {
-    components:{
-      RebtelTooltip
-      }
-  }
-  </script>
-  ```
+Import plugin:
 
+```javascript
+import {RebtelTooltip} from '@rebtel-dev/rebtel-ui-core'
 
+Vue.use(RebtelTooltip)
+```
+**OR**
+
+Import component:
+
+```javascript
+import { RebtelTooltip } from '@rebtel-dev/rebtel-ui-core'
+
+Vue.component('RebtelTooltip', RebtelTooltip)
+```
+### Use
+
+```xml
+<RebtelTooltip :text="$t('your_source.some_strings')"/>
+
+```
+### SSR
+
+Include plugin in your `nuxt.config.js` file:
+
+```javascript
+module.exports = {
+  plugins: ['@/plugins/rebtel-core-ui.js']
+}
+```
+
+And your `plugins/rebtel-core-ui.js` will look like:
+
+```javascript
+import Vue from 'vue'
+import { RebtelTooltip } from '@rebtel-dev/rebtel-ui-core'
+Vue.component('RebtelTooltip', RebtelTooltip)
+```
 #
 
 
