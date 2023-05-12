@@ -1,12 +1,15 @@
 {
   "name": "@rebtel-dev/rebtel-ui-core",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "rebtel core ui library",
   "main": "dist/index.js",
   "scripts": {
     "build:client": "webpack --config ./webpack.config.js --progress --hide-modules",
     "build:ssr": "webpack --config ./webpack.ssr.config.js  --progress --hide-modules",
     "build": "npm run build:client && npm run build:ssr"
+  },
+  "browser": {
+    "fs": false
   },
   "author": "rebtel-web",
   "devDependencies": {
@@ -18,10 +21,10 @@
     "node-sass": "^4.5.0",
     "optimize-css-assets-webpack-plugin": "^3.1.1",
     "sass-loader": "^5.0.1",
-    "vue": "^2.0.0",
+    "vue": "^2.6.14",
     "vue-loader": "^11.1.4",
-    "vue-template-compiler": "^2.0.0",
-    "webpack": "^2.2.0",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.12.0",
     "webpack-merge": "^4.1.0"
   },
   "repository": {
