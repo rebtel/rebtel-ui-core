@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style>
+@import "./../../assets/main.css";
 .tool {
     cursor: help;
     position: relative;
