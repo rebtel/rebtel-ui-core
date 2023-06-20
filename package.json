@@ -1,6 +1,6 @@
 {
   "name": "@rebtel-dev/rebtel-ui-core",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "rebtel core ui library",
   "main": "dist/index.js",
   "scripts": {
@@ -43,6 +43,5 @@
     "url": "https://github.com/rebtel/rebtel-ui-core/issues"
   },
   "homepage": "https://github.com/rebtel/rebtel-ui-core#readme",
-  "dependencies": {},
   "license": "ISC"
 }
