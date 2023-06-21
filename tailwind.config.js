@@ -44,6 +44,8 @@ module.exports = {
         'custom-1.2': '1.2'
       },
       minWidth: {
+        '1/2': '50%',
+        '57.75': '15.75rem',
         80: '20rem',
         90: '23.4rem',
         24: '6rem',
@@ -97,11 +99,5 @@ module.exports = {
       padding: ['active']
     }
   },
-  plugins: [],
-  purge: {
-    content: [
-      './src/**/*.html',
-      './src/**/*.vue'
-    ],
-  }
+  plugins: []
 }
